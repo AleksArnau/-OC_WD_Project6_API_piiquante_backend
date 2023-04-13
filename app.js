@@ -1,10 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
-// const userRoutes = require("./routes/user");
+const userRoutes = require("./routes/user");
 
 const app = express();
-//base de donnee, a placer apres la declaration de app UdayX7XHTk9ewjkx
+//base de donnee, a placer apres la declaration de app
 mongoose
   .connect(
     "mongodb+srv://piiquante:UdayX7XHTk9ewjkx@clusterp6.5pmujpo.mongodb.net/?retryWrites=true&w=majority",
@@ -30,5 +30,7 @@ app.use((req, res, next) => {
 });
 
 //routes pour les requetes /api/stuff /api/sauces
+
+app.use("/api/auth", userRoutes);
 
 module.exports = app;
