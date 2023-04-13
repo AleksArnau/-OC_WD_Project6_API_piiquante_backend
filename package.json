@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/AleksArnau/-OC_WD_Project6_API_piiquante_backend/issues"
   },
-  "homepage": "https://github.com/AleksArnau/-OC_WD_Project6_API_piiquante_backend#readme"
+  "homepage": "https://github.com/AleksArnau/-OC_WD_Project6_API_piiquante_backend#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "4.1",
+    "mongoose": "^7.0.3",
+    "mongoose-unique-validator": "^4.0.0"
+  }
 }
