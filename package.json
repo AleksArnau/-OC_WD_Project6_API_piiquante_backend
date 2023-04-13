@@ -1,0 +1,23 @@
+{
+  "name": "api_piiquante",
+  "version": "1.0.0",
+  "description": "API for the hot takes website \"piiquante",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AleksArnau/-OC_WD_Project6_API_piiquante_backend.git"
+  },
+  "keywords": [
+    "API",
+    "backend"
+  ],
+  "author": "Aleks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AleksArnau/-OC_WD_Project6_API_piiquante_backend/issues"
+  },
+  "homepage": "https://github.com/AleksArnau/-OC_WD_Project6_API_piiquante_backend#readme"
+}
