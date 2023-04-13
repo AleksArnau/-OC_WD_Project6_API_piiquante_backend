@@ -1,17 +1,19 @@
 const express = require("express");
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 const userRoutes = require("./routes/user");
+const path = require("path");
 
 const app = express();
-//base de donnee, a placer apres la declaration de app
+//base de donnee, a placer apres la declaration de app, DBUSERNAME et DBPASWORD dans .env
 mongoose
   .connect(
-    "mongodb+srv://piiquante:UdayX7XHTk9ewjkx@clusterp6.5pmujpo.mongodb.net/?retryWrites=true&w=majority",
+    `mongodb+srv://${process.env.DBUSERNAME}:${process.env.DBPASSWORD}@clusterp6.5pmujpo.mongodb.net/?retryWrites=true&w=majority`,
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => console.log("Connexion à MongoDB réussie !"))
-  .catch(() => console.log("Connexion à MongoDB échouée !"));
+  .catch((error) => console.log(error, "Connexion à MongoDB échouée !"));
 //middleware pour interpreter le json du front, a declarer apres la declaration de app
 app.use(express.json());
 
@@ -32,5 +34,7 @@ app.use((req, res, next) => {
 //routes pour les requetes /api/stuff /api/sauces
 
 app.use("/api/auth", userRoutes);
+
+app.use("/images", express.static(path.join(__dirname, "images")));
 
 module.exports = app;
