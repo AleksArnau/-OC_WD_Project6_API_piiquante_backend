@@ -10,7 +10,7 @@ const sauceSchema = mongoose.Schema({
   heat: { type: Number, required: true },
   likes: { type: Number },
   dislikes: { type: Number },
-  usersLiked: { type: ["String <userId>"] },//need to define indexes at the schema level for compound indexes
+  usersLiked: { type: ["String <userId>"] }, //need to define indexes at the schema level for compound indexes
   usersDisliked: { type: ["String <userId>"] },
 });
 
